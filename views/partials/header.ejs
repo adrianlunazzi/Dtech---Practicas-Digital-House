@@ -1,0 +1,33 @@
+<div class="header-top">
+    <div class="texto-header-top">
+        <p>Atención Comercial: 0800-999-9999 </p>
+    </div>
+    <div class="icono-carrito">
+        <a href="/products/carrito"> <i class="fas fa-shopping-cart" alt="Mis Compras"></i></a>
+    </div>
+</div>
+<header>
+
+    <a href="/"> <img width="80px" height="80px" src="/images/logo.svg"></a>
+    <input type="checkbox" id="btn-menu" />
+
+    <label for="btn-menu" class="icono-menu"><i class="fas fa-bars"></i></label>
+    <nav class="menu">
+        <ul>
+            <li><a href="../about">Quienes Somos</a></li>
+            <li><a href="../products/productos">Planes</a></li>
+            <li><a href="../contacto">Contacto</a></li>
+
+            <% if (locals.isLogged) { %>
+
+                <li><a class="contenedor-login-user" href="../users/perfil">Hola <%= locals.userLogged.firstName %> <img src="/images/users/<%= locals.userLogged.image %>" class="imagen-perfil-user"> </a> </li>
+                <li><a href="../users/logout">Logout</a></li>
+
+                <% } else { %>
+                    <li><a href="../users/registro">Registro</a></li>
+                    <li><a href="../users/login">Login</a></li>
+
+                    <% } %>
+        </ul>
+
+    </nav>

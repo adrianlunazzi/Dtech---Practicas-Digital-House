@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/crud-copy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Panel Producto</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+        <div class="subtitulo-productos">
+            <h1>PANEL GESTION ADMINISTRADOR</h1>
+        </div>
+        <br>
+        <div class="contenedor-login">
+            <div class="contenido-login">
+                <div class="titulo-login">
+                    <h2>Editar Producto</h2>
+                    <br>
+                </div>
+                <form action="/products/editar/<%= product.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
+                    <div class="etiquetas-form">
+                        <label for="name">Nombre:</label>
+                        <input type="type"  class="campos-form" name="name" value ="<%= product.name %>"/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label class="campos-form-label">Descripcion:</label>
+                        <input type="type"  name= "description" class="campos-form" value ="<%= product.description %>">
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item1 :</label>
+                            <input type="type"  class="campos-form " name="item1" value ="<%= product.item1 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item1 :</label>
+                            <input type="type"  class="campos-form " name="item2" value ="<%= product.item2 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item2 :</label>
+                            <input type="type"  class="campos-form " name="item3" value ="<%= product.item3 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item3 :</label>
+                            <input type="type"  class="campos-form " name="item4" value ="<%= product.item4 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item4 :</label>
+                            <input type="type"  class="campos-form " name="item5" value ="<%= product.item5 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item5 :</label>
+                            <input type="type"  class="campos-form " name="item6" value ="<%= product.item6 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item7 :</label>
+                            <input type="type"  class="campos-form " name="item7" value ="<%= product.item7 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item8 :</label>
+                            <input type="type"  class="campos-form " name="item8" value ="<%= product.item8 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Categoria:</label>
+                            <select name="categoryId" id="categoria">
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
+                                
+                                    <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
+                                
+                            <% } %>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label for="precio ">Precio:</label>
+                            <input type="number" class="campos-form" name="price" required value ="<%= product.price %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="imagen">Imagen:</label>
+                            <input type="file"  class="campos-form" name="image" value ="<%= product.image %>"/>
+                        </div>
+                        <br>
+                        <div class="contenedor-btn ">
+                            <input type="submit" class="boton-estilo" value="Aceptar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
+</html>

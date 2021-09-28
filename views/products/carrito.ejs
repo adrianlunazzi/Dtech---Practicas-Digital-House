@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/header-footer.css">
+        <link rel="stylesheet" href="/css/carrito.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+        <title>Productos</title>
+    </head>
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+        <main>
+           
+            <section> 
+                <div class="subtitulo-productos">
+                    <h1>INICIA TU COMPRA</h1>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                <div class="contenedor-servicios">
+                        <div class="contenido-login">
+                            <div class="titulo-producto">
+                                <h1>MI CARRITO</h1>
+                            </div>
+                            <div class="t-body">
+                            <div class="contenedor-producto">
+                            
+                              <div class="imagen-producto"> 
+                                <div></i><img src="/images/onepage.svg" width="120px">
+                               </div>
+                        </div>
+                        <div class="descripcion-producto">
+                            ONE PAGE </div>
+                        <div class="precio-producto">
+                            $4000 </div>
+                        <div class="btn-crud">
+                            <input type="number" name="" id="">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        </div>
+                    </div>
+                            <div class="titulo-producto3">
+                                <a href="./productos"> <h3>AGREGAR PRODUCTO</h3><i class="fas fa-plus"></i></a>
+                            </div>  
+                            <div class="titulo-producto2">
+                                <h2>DESCUENTO</h2>
+                                <h3>20%</h3>
+                            </div>   
+                            <div class="titulo-producto2">
+                                <h1>SUBTOTAL</h1>
+                                <h3>$10000</h3>
+                            </div>  
+                            <br>
+                        <div class="contenedor-btn">
+                        <div class="boton-estilo">
+                                <a href=""></a> <button class="boton-estilo"> FINALIZAR COMPRA</button> </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                </div>
+            </section>
+        </main>
+        <script src="/js/guardarCarrito.js"></script>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
